@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
@@ -11,12 +14,14 @@
 }
 
 /* Common styles */
+
 .display-flex {
   display: flex;
 }
 
-.header {
-  max-width: 1440px;
+.header,
+.main {
+  width: 1440px;
   margin: 0 auto;
 }
 .section-margin-top {
@@ -27,6 +32,7 @@
 }
 .primary-btn {
   border-radius: 41px;
+  border: 0;
   background: rgba(224, 44, 109, 1);
 
   color: rgba(255, 255, 255, 1);
@@ -34,12 +40,17 @@
   font-weight: 700;
   padding: 10px 24px;
 }
+.primary-btn:hover {
+  background-color: lightsalmon;
+  color: #000000;
+}
 
 /* Nav styles */
 .navbar {
   justify-content: space-between;
   align-items: center;
 }
+
 .navbar .brand-name {
   font-size: 1.5rem;
   font-weight: 700;
@@ -76,9 +87,6 @@
 .banner-image {
   position: relative;
 }
-.primary-btn i {
-  margin-left: 8px;
-}
 
 .circle {
   position: absolute;
@@ -87,6 +95,48 @@
   z-index: -1;
 }
 
+/* main section */
+/* sponsors section styles  */
+.sponsors {
+  margin: 100px 0;
+  justify-content: space-evenly;
+  padding: 25px 62px;
+  background: linear-gradient(
+    135.29deg,
+    rgba(192, 204, 218, 0.01),
+    rgba(192, 204, 218, 0.01),
+    rgba(192, 204, 218, 0.01)
+  );
+  border-top: 1px solid rgba(192, 204, 218, 0.3);
+  border-bottom: 1px solid rgba(192, 204, 218, 0.3);
+}
+
+/* gadgets section styles */
+.gadgets-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.gadgets-heading {
+  color: rgba(58, 58, 58, 1);
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+.gadgets-card {
+  padding: 17px 15px;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+.gadgets-card img {
+  width: 100%;
+}
+.gadgets-card i {
+  background-color: rgba(255, 255, 0, 0.35);
+}
+.ratting-span {
+  margin-left: 20px;
+}
 /**Responsive media Query */
 
 @media screen and (max-width: 570px) {
@@ -96,6 +146,7 @@
   .navbar {
     flex-direction: column;
   }
+
   .nav-items {
     flex-wrap: wrap;
   }
@@ -108,6 +159,9 @@
   }
   .banner-heading {
     font-size: 1.75rem;
+  }
+  .gadgets-card-container {
+    grid-template-columns: 1fr;
   }
 }
 
