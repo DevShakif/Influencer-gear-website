@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-manrope {
+  font-family: "Manrope", sans-serif;
+}
+
+/* Common styles */
+.display-flex {
+  display: flex;
+}
+
+.header {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.section-margin-top {
+  margin-top: 50px;
+}
+
+/* Nav styles */
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(58, 58, 58, 1);
+}
+.nav-items {
+  gap: 34px;
+}
+
+.nav-item {
+  font-weight: 600;
+  list-style: none;
+}
+
+.nav-item a {
+  color: rgba(58, 58, 58, 1);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/**Responsive media Query */
+@media screen and (max-width: 570px) {
+  .navbar {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .nav-items {
+    flex-wrap: wrap;
+  }
+}
