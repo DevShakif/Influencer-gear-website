@@ -22,6 +22,18 @@
 .section-margin-top {
   margin-top: 50px;
 }
+.text-primary {
+  color: rgba(58, 58, 58, 1);
+}
+.primary-btn {
+  border-radius: 41px;
+  background: rgba(224, 44, 109, 1);
+
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 24px;
+}
 
 /* Nav styles */
 .navbar {
@@ -31,7 +43,6 @@
 .navbar .brand-name {
   font-size: 1.5rem;
   font-weight: 700;
-  color: rgba(58, 58, 58, 1);
 }
 .nav-items {
   gap: 34px;
@@ -43,18 +54,80 @@
 }
 
 .nav-item a {
-  color: rgba(58, 58, 58, 1);
   text-decoration: none;
   font-size: 1rem;
+  color: rgba(58, 58, 58, 1);
+}
+
+/* banner styles */
+.banner {
+  justify-content: space-between;
+  align-items: center;
+}
+.banner-heading {
+  font-weight: 700;
+  font-size: 3.25rem;
+  margin: 0;
+}
+.banner-description {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.banner-image {
+  position: relative;
+}
+.primary-btn i {
+  margin-left: 8px;
+}
+
+.circle {
+  position: absolute;
+  right: -20px;
+  top: -30px;
+  z-index: -1;
 }
 
 /**Responsive media Query */
+
 @media screen and (max-width: 570px) {
+  br {
+    display: none;
+  }
   .navbar {
     flex-direction: column;
-    flex-wrap: wrap;
   }
   .nav-items {
     flex-wrap: wrap;
+  }
+  .banner {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+  .banner-info {
+    text-align: center;
+  }
+  .banner-heading {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 571px) and (max-width: 990px) {
+  .nav-items {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .banner-heading {
+    width: 50%;
+  }
+  .banner-image img {
+    width: 100%;
+  }
+  .banner-heading {
+    font-size: 1.5rem;
+    width: 300px;
+  }
+  .banner-description {
+    width: 400px;
   }
 }
